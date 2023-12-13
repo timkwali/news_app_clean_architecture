@@ -19,7 +19,7 @@ class ArticleEntity extends Equatable{
     this.urlToImage,
     this.publishedAt,
     this.content,
-  }): super();
+  });
 
   @override
   List<Object?> get props {
