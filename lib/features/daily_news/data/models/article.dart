@@ -4,6 +4,7 @@ import 'package:news_app_clean_architecture/features/daily_news/domain/entities/
 @Entity(tableName: 'article', primaryKeys: ['id'])
 class ArticleModel extends ArticleEntity {
   const ArticleModel({
+    @PrimaryKey()
     int ? id,
     String ? author,
     String ? title,
@@ -13,14 +14,14 @@ class ArticleModel extends ArticleEntity {
     String ? publishedAt,
     String ? content
   }): super(
-      id: id,
-      author: author,
-      title: title,
-      description: description,
-      url: url,
-      urlToImage: urlToImage,
-      publishedAt: publishedAt,
-      content: content
+    id: id,
+    author: author,
+    title: title,
+    description: description,
+    url: url,
+    urlToImage: urlToImage,
+    publishedAt: publishedAt,
+    content: content
   );
 
   factory ArticleModel.fromJson(Map<String, dynamic> map) {
