@@ -51,6 +51,7 @@ class SavedArticles extends HookWidget {
   }
 
   Widget _buildArticlesList(List<ArticleEntity> articles) {
+    print("saved aticles=> $articles");
     if (articles.isEmpty) {
       return const Center(
           child: Text(
